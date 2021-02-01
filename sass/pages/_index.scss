@@ -1,0 +1,25 @@
+.location {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $location-background;
+    &__input {
+        width: auto;
+        border: none;
+        background: transparent;
+        text-align: center;
+
+        @include mobile-only {
+            width: 110px;
+        }
+    }
+    &__icon {
+        // position: relative;
+        // right: -2%;
+        @include mobile-only {
+            position: relative;
+            right: 7.5%;
+        }
+    }
+}
