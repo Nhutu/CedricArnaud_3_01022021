@@ -4,11 +4,22 @@
     justify-content: center;
     align-items: center;
     background: $location-background;
-    gap: 10px;
     &__input {
-        width: 30%;
-        height: 30px;
+        width: auto;
         border: none;
         background: transparent;
+        text-align: center;
+
+        @include mobile-only {
+            width: 110px;
+        }
+    }
+    &__icon {
+        // position: relative;
+        // right: -2%;
+        @include mobile-only {
+            position: relative;
+            right: 7.5%;
+        }
     }
 }
