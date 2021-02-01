@@ -14,13 +14,44 @@ header {
   font-family: "Shrikhand", cursive;
 }
 
+.location {
+  font-family: "Roboto", sans-serif;
+}
+.location__input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #464646;
+  font-size: 15px;
+}
+.location__icon {
+  font-size: 18px;
+  color: #464646;
+}
+
 header {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
-  box-shadow: 0px 0px 8px 0px #8c8c8c;
+  box-shadow: 0 0 3px 0 #8C8C8C;
+  z-index: 0;
+}
+
+.location {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+  gap: 10px;
+}
+.location__input {
+  width: 30%;
+  height: 30px;
+  border: none;
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

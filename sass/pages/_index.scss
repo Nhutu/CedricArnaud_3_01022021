@@ -1,0 +1,14 @@
+.location {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $location-background;
+    gap: 10px;
+    &__input {
+        width: 30%;
+        height: 30px;
+        border: none;
+        background: transparent;
+    }
+}
