@@ -2,8 +2,11 @@ header {
     font-family: 'Shrikhand', cursive;
 }
 
-.location {
+body {
     font-family: 'Roboto', sans-serif;
+}
+
+.location {
     &__input {
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
@@ -13,5 +16,17 @@ header {
     &__icon {
         font-size: 16px;
         color: $location-typo;
+    }
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.explore {
+    &__descr {
+        font-weight: 300;
     }
 }
