@@ -31,7 +31,8 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
+    @include padding-section;
     text-align: center;
     background: $secondary-background;
     &__title {
@@ -44,4 +45,55 @@
            margin-bottom: 15px; 
         }
     }
+}
+
+.instructions {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 20px;
+    @include padding-section;
+    &-step {
+        width: 90%;
+        height: 70px;
+        display: flex;
+        justify-content:start;
+        align-items: center;
+        border-radius: 20px;
+        background: $secondary-background;
+        margin-left: 10px;
+        @include box-shadow(0px, 10px, 20px, -15px);
+        &__number {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            right: 10px;
+            border-radius: 50%;
+            background: $primary-color;
+            color: white;
+            font-size: 14px;
+        }
+        &__icon {
+            margin-left: 15px;
+            color: gray;
+            &--color {
+                color: $primary-color;
+            }
+        }
+        &__text {
+            width: 60%;
+            margin-left: 30px;
+        }
+        &:last-child {
+            background: lighten($primary-color, 35%);
+        }
+    }
+}
+
+.restaurants {
+    margin-left: 20px;
 }
