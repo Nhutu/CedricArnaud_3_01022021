@@ -7,3 +7,7 @@
 @mixin box-shadow($horizontal, $vertical, $blur, $spread) {
     box-shadow: $horizontal $vertical $blur $spread $shadow;
 }
+
+@mixin padding-section {
+    padding-top: 30px;
+}

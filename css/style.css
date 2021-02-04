@@ -39,6 +39,10 @@ body {
   font-weight: 300;
 }
 
+.instructions-step {
+  font-weight: 500;
+}
+
 .btn {
   width: 210px;
   height: 50px;
@@ -92,7 +96,8 @@ header {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding: 30px;
+  padding: 0 30px 30px 30px;
+  padding-top: 30px;
   text-align: center;
   background: #F6F6F6;
 }
@@ -105,6 +110,57 @@ header {
   .explore__descr {
     margin-bottom: 15px;
   }
+}
+
+.instructions {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 20px;
+  padding-top: 30px;
+}
+.instructions-step {
+  width: 90%;
+  height: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 20px;
+  background: #F6F6F6;
+  margin-left: 10px;
+  box-shadow: 0px 10px 20px -15px #8C8C8C;
+}
+.instructions-step__number {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 10px;
+  border-radius: 50%;
+  background: #9356DC;
+  color: white;
+  font-size: 14px;
+}
+.instructions-step__icon {
+  margin-left: 15px;
+  color: gray;
+}
+.instructions-step__icon--color {
+  color: #9356DC;
+}
+.instructions-step__text {
+  width: 60%;
+  margin-left: 30px;
+}
+.instructions-step:last-child {
+  background: #f2eafb;
+}
+
+.restaurants {
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
