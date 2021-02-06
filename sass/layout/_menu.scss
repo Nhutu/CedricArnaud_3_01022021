@@ -47,11 +47,13 @@ main {
         width: 90%;
         text-transform: uppercase;
         font-weight: 100;
+        letter-spacing: -1px;
         &:after {
             content: "";
             display: block;
             width: 15%; 
             border-bottom: 3px solid $tertiary-color;
+            padding-top: 5px;
         }
     }
     &__entree {
@@ -60,15 +62,21 @@ main {
         border-radius: 20px;
         @include box-shadow(0px, 10px, 20px, -15px);
         padding: 10px;
+        padding-left: 12px;
         h3 {
+            width: 90%;
+            font-weight: 500;
+            padding-top: 2px;
             padding-bottom: 5px;
         }
     }
     &__recipe {
         display:inline-block;
         font-weight: 100;
+        font-size: 15px;
     }
     &__price {
         float: right;
+        font-size: 14px;
     }
 }
