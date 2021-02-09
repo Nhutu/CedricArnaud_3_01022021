@@ -118,10 +118,15 @@
         width: 90%;
     }
     &-tab {
-        width: 44%;
+        flex-basis: 33.333333%;
         height: 250px;
         @include mobile-only {
+            flex-basis: 0;
             width: 90%;
+        }
+        @include tablet-only {
+            width: 90%;
+            flex-basis: 44%;
         }
         background: white;
         border-radius: 20px;
