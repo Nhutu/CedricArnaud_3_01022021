@@ -79,6 +79,10 @@ h1 {
   left: 5%;
 }
 
+.header__icon:visited {
+  color: black;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -117,18 +121,32 @@ h1 {
 
 main {
   position: relative;
+  background: #F6F6F6;
+}
+@media screen and (max-width: 480px) {
+  main {
+    background-color: transparent;
+  }
 }
 
 .restaurant-menu-img {
-  position: relative;
   width: 100%;
+  position: relative;
   height: 250px;
   background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+  .restaurant-menu-img {
+    width: 100%;
+  }
 }
 
 .restaurant-menu-container {
+  width: 60%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,6 +157,18 @@ main {
   border-top-right-radius: 35px;
   background: #F6F6F6;
   padding: 40px 0;
+}
+@media screen and (max-width: 480px) {
+  .restaurant-menu-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurant-menu-container {
+    width: 80%;
+  }
 }
 .restaurant-menu-container__title {
   width: 100%;
@@ -319,7 +349,7 @@ main {
   width: 90%;
 }
 .restaurants-tab {
-  width: 44%;
+  flex-basis: 33.333333%;
   height: 250px;
   background: white;
   border-radius: 20px;
@@ -327,7 +357,14 @@ main {
 }
 @media screen and (max-width: 480px) {
   .restaurants-tab {
+    flex-basis: 0;
     width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants-tab {
+    width: 90%;
+    flex-basis: 44%;
   }
 }
 .restaurants-tab a {

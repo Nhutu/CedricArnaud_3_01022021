@@ -4,6 +4,12 @@
     }
 }
 
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, min-tablets-portrait)) and (max-width: map-get($breakpoints, max-tablets-portrait)) {
+        @content;
+    }
+}
+
 @mixin box-shadow($horizontal, $vertical, $blur, $spread) {
     box-shadow: $horizontal $vertical $blur $spread $shadow;
 }

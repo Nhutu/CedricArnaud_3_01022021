@@ -1,17 +1,35 @@
 main {
     position: relative;
+    background: $secondary-background;
+    @include mobile-only {
+        background-color: transparent;
+    }
 }
 
 .restaurant-menu-img {
-    position: relative;
     width: 100%;
+    position: relative;
+    @include mobile-only {
+        width: 100%;
+    }
     height: 250px;
     background: url('../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 .restaurant-menu-container {
+    width: 60%;
+    margin: 0 auto;
+    @include mobile-only {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include tablet-only {
+        width: 80%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
