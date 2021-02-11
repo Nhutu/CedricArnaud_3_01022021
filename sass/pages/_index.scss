@@ -170,13 +170,55 @@
                 font-size: 16px;
                 padding-top: 5px;
                 font-weight: 300;
+                display: inline-block;
             }
             &__icon {
-                position:relative;
-                bottom: 35px;
+                position: relative;
+                bottom: 10px;
                 float: right;
-                font-size: 20px;
-            } 
+                width: 23px;
+                stroke: black;
+                stroke-width: 1.5;
+                overflow: visible;
+            }
         }
     }
 }
+
+path#grad1 { transition: .4s;}
+
+svg {
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+    float: right;
+    width: 20px;
+    max-height: 80px;
+    overflow: visible;
+}
+
+svg .gradient1 { fill: transparent; stroke: black; stroke-width: 1.5;}
+svg .gradient2 { fill: url("#grad2"); stroke: url("#grad2"); stroke-width: 1.5;}
+
+svg use {
+   transition: .4s;
+   opacity: 0;
+}
+
+svg:active use {
+   opacity: 1;
+}
+
+// #clock-gradient {
+//   opacity: 0.0;
+//   display: inline-block;
+//   -webkit-transition: opacity .4s ease;
+//   -moz-transition: opacity .4s ease;
+//   -o-transition: opacity .4s ease;
+//   transition: opacity .4s ease;
+//   width: 40px;
+//   height: 40px;
+// }
+// #clock-gradient:hover {
+//   opacity: 1.0;
+// }

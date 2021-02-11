@@ -74,13 +74,14 @@ main {
             padding-top: 5px;
         }
     }
-    &__entree {
+    &__entree, &__main, &__dessert {
         width: 100%;
         background: white;
         border-radius: 20px;
         @include box-shadow(0px, 10px, 20px, -15px);
         padding: 10px;
         padding-left: 12px;
+        opacity: 0;
         h3 {
             width: 90%;
             font-weight: 500;
@@ -94,7 +95,89 @@ main {
         font-size: 15px;
     }
     &__price {
-        float: right;
+        display: inline-block;
+        position: relative;
+        left: 70%;
         font-size: 14px;
+    }
+    &-take {
+        width: 2%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        opacity: 0;
+        background: $tertiary-color;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    // ANIMATION
+    &__entree {
+        animation: dishAnim 500ms forwards;
+        animation-timing-function: ease;
+    }
+
+    &__main {
+        animation: dishAnim 500ms 500ms forwards;
+        animation-timing-function: ease;
+    }
+    &__dessert {
+        animation: dishAnim 500ms 1000ms forwards;
+        animation-timing-function: ease-in;
+    }
+
+    &-entree-container {
+        cursor: pointer;
+        &:active + .restaurant-menu-take {
+            animation: takeDish 500ms forwards;
+        }
+        &:not(:active) + .restaurant-menu-take {
+            animation: removeDish 500ms forwards;
+        }
+    }
+}
+
+@keyframes dishAnim {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(30%);
+        opacity: 0.5;
+    }
+    70% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes takeDish {
+    0% {
+        width: 2%;
+        opacity: 1;
+    }
+    100% {
+        width: 10%;
+        opacity: 1;
+    }
+}
+
+@keyframes removeDish {
+    0% {
+        width: 10%;
+        opacity: 1;
+    }
+    100% {
+        width: 2%;
+        opacity: 0;
     }
 }
