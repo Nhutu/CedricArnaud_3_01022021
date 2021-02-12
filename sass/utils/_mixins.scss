@@ -10,6 +10,12 @@
     }
 }
 
+@mixin laptop-desktop {
+    @media screen and (min-width: map-get($breakpoints, min-desktop)), (min-width: map-get($breakpoints, min-laptop)) and (min-width: map-get($breakpoints, max-laptop)) {
+        @content;
+    }
+}
+
 @mixin box-shadow($horizontal, $vertical, $blur, $spread) {
     box-shadow: $horizontal $vertical $blur $spread $shadow;
 }

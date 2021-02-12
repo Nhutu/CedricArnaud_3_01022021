@@ -100,7 +100,7 @@ main {
     text-overflow: ellipsis;
   }
   &__price {
-    display: inline-block;
+    display: block;
     font-size: 14px;
     float: right;
   }
@@ -139,6 +139,10 @@ main {
     cursor: pointer;
     &:active + .restaurant-menu-take {
       animation: takeDish 500ms forwards;
+    }
+    &:active + .restaurant-menu-take > .fa-check-circle {
+      display: block;
+      animation: spinIcon 500ms forwards;
     }
     &:not(:active) + .restaurant-menu-take {
       animation: removeDish 500ms forwards;
@@ -215,7 +219,7 @@ main {
 
   @keyframes changeWidth {
     0% {
-        width: 240px;
+      width: 240px;
     }
     100% {
       width: 220px;
@@ -246,6 +250,12 @@ main {
     }
   }
 
+  @keyframes spinIcon {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   @keyframes movePrice {
     100% {
       transform: translateX(-50px);
@@ -255,6 +265,54 @@ main {
   @keyframes basePrice {
     0% {
       transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
+
+
+
+// PC LAPTOP ANIMATION
+@include laptop-desktop {
+  @keyframes takeDish {
+    0% {
+      width: 2%;
+      opacity: 1;
+    }
+    100% {
+      width: 15%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes removeDish {
+    0% {
+      width: 15%;
+      opacity: 1;
+    }
+    100% {
+      width: 2%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes spinIcon {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes movePrice {
+    100% {
+      transform: translateX(-120px);
+    }
+  }
+
+  @keyframes basePrice {
+    0% {
+      transform: translateX(-120px);
     }
     100% {
       transform: translateX(0px);
