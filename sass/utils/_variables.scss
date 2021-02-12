@@ -11,5 +11,8 @@ $shadow: #8C8C8C;
 $breakpoints: (
     mobile-portrait: 480px,
     min-tablets-portrait: 768px,
-    max-tablets-portrait: 1024px
+    max-tablets-portrait: 1024px,
+    min-desktop: 1281px,
+    min-laptop: 1025px,
+    max-laptop: 1280px
 );
