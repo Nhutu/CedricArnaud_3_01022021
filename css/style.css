@@ -227,12 +227,14 @@ main {
   display: inline-block;
   font-weight: 100;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant-menu__price {
   display: inline-block;
-  position: relative;
-  left: 70%;
   font-size: 14px;
+  float: right;
 }
 .restaurant-menu-take {
   width: 2%;
@@ -270,6 +272,15 @@ main {
 .restaurant-menu-entree-container:not(:active) + .restaurant-menu-take {
   animation: removeDish 500ms forwards;
 }
+.restaurant-menu-entree-container:active > .restaurant-menu__price {
+  animation: movePrice 500ms forwards;
+}
+.restaurant-menu-entree-container:not(:active) > .restaurant-menu__price {
+  animation: basePrice 500ms forwards;
+}
+.restaurant-menu-entree-container:active > .restaurant-menu__recipe {
+  animation: changeWidth 500ms forwards;
+}
 
 @keyframes dishAnim {
   0% {
@@ -288,24 +299,82 @@ main {
     opacity: 1;
   }
 }
-@keyframes takeDish {
-  0% {
-    width: 2%;
-    opacity: 1;
+@media screen and (max-width: 480px) {
+  @keyframes takeDish {
+    0% {
+      width: 2%;
+      opacity: 1;
+    }
+    100% {
+      width: 15%;
+      opacity: 1;
+    }
   }
-  100% {
-    width: 10%;
-    opacity: 1;
+  @keyframes removeDish {
+    0% {
+      width: 15%;
+      opacity: 1;
+    }
+    100% {
+      width: 2%;
+      opacity: 0;
+    }
+  }
+  @keyframes movePrice {
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+  @keyframes basePrice {
+    0% {
+      transform: translateX(-25px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes changeWidth {
+    0% {
+      width: 240px;
+    }
+    100% {
+      width: 220px;
+    }
   }
 }
-@keyframes removeDish {
-  0% {
-    width: 10%;
-    opacity: 1;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  @keyframes takeDish {
+    0% {
+      width: 2%;
+      opacity: 1;
+    }
+    100% {
+      width: 10%;
+      opacity: 1;
+    }
   }
-  100% {
-    width: 2%;
-    opacity: 0;
+  @keyframes removeDish {
+    0% {
+      width: 10%;
+      opacity: 1;
+    }
+    100% {
+      width: 2%;
+      opacity: 0;
+    }
+  }
+  @keyframes movePrice {
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+  @keyframes basePrice {
+    0% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
   }
 }
 .location {
