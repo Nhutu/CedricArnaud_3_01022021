@@ -1,0 +1,25 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile-portrait)) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, min-tablets-portrait)) and (max-width: map-get($breakpoints, max-tablets-portrait)) {
+        @content;
+    }
+}
+
+@mixin laptop-desktop {
+    @media screen and (min-width: map-get($breakpoints, min-desktop)), (min-width: map-get($breakpoints, min-laptop)) and (min-width: map-get($breakpoints, max-laptop)) {
+        @content;
+    }
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread) {
+    box-shadow: $horizontal $vertical $blur $spread $shadow;
+}
+
+@mixin padding-section {
+    padding-top: 30px;
+}
