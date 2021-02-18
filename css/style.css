@@ -272,6 +272,7 @@ main {
 .restaurant-menu-entree-container:active + .restaurant-menu-take > .fa-check-circle {
   display: block;
   animation: spinIcon 500ms forwards;
+  -webkit-animation: spinIcon 500ms forwards;
 }
 .restaurant-menu-entree-container:not(:active) + .restaurant-menu-take {
   animation: removeDish 500ms forwards;
@@ -322,6 +323,11 @@ main {
     100% {
       width: 2%;
       opacity: 0;
+    }
+  }
+  @keyframes spinIcon {
+    100% {
+      transform: rotate(360deg);
     }
   }
   @keyframes movePrice {
