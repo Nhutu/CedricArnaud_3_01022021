@@ -1,0 +1,12 @@
+.start-color {
+    color: #FF79DA;
+}
+
+.stop-color {
+    color: #9356DC;
+}
+
+#grad1, #grad2 {
+    --color-start: #FF79DA;
+    --color-stop: #9356DC;
+}
