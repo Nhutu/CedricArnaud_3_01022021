@@ -16,6 +16,12 @@
     }
 }
 
+@mixin desktop-large {
+    @media screen and (min-width: map-get($breakpoints, min-desktop-large)) {
+        @content;
+    }
+}
+
 @mixin box-shadow($horizontal, $vertical, $blur, $spread) {
     box-shadow: $horizontal $vertical $blur $spread $shadow;
 }

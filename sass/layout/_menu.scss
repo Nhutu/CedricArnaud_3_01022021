@@ -292,14 +292,14 @@ main {
       opacity: 1;
     }
     100% {
-      width: 15%;
+      width: 10%;
       opacity: 1;
     }
   }
 
   @keyframes removeDish {
     0% {
-      width: 15%;
+      width: 10%;
       opacity: 1;
     }
     100% {
@@ -316,7 +316,7 @@ main {
 
   @keyframes movePrice {
     100% {
-      transform: translateX(-120px);
+      transform: translateX(-100px);
     }
   }
 
@@ -326,6 +326,36 @@ main {
     }
     100% {
       transform: translateX(0px);
+    }
+  }
+}
+
+@include desktop-large {
+  @keyframes takeDish {
+    0% {
+      width: 2%;
+      opacity: 1;
+    }
+    100% {
+      width: 4%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes removeDish {
+    0% {
+      width: 4%;
+      opacity: 1;
+    }
+    100% {
+      width: 2%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes movePrice {
+    100% {
+      transform: translateX(-80px);
     }
   }
 }
