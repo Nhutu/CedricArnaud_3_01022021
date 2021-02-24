@@ -92,6 +92,9 @@ main {
       font-weight: 500;
       padding-top: 2px;
       padding-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   &__recipe {
@@ -140,6 +143,9 @@ main {
 
   &-entree-container {
     cursor: pointer;
+    &:active > h3 {
+      animation: moveTitle 500ms forwards;
+    }
     &:active + .restaurant-menu-take {
       animation: takeDish 500ms forwards;
     }
@@ -235,6 +241,15 @@ main {
       width: 220px;
     }
   }
+
+  @keyframes moveTitle {
+    0% {
+      width: 80%;
+    }
+    100% {
+      width: 70%;
+    }
+  }
 }
 
 @include tablet-only {
@@ -280,9 +295,16 @@ main {
       transform: translateX(0px);
     }
   }
+
+  @keyframes moveTitle {
+    0% {
+      width: 80%;
+    }
+    100% {
+      width: 70%;
+    }
+  }
 }
-
-
 
 // PC LAPTOP ANIMATION
 @include laptop-desktop {
